@@ -1,0 +1,32 @@
+button {
+  	background: #00CC99;
+  	height: 55px; 
+  	width: 55px;
+  	border-radius: 20px;
+  	color: white;
+  	font-size: 17pt;
+  	font-family: 'Ubuntu Condensed', sans-serif;
+  	}
+ button:hover {
+  	background: #66FF99;
+  	}
+
+button:active {
+  	background: #CCCCCC;
+  	color: #000000;
+  	}
+ input {
+    width: 310px;
+    height: 50px;
+    border: 2px inset;
+    border-radius: 10px;
+    background-clip: padding-box; 
+    display:block;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size:18px;
+    font-weight: 300;    
+    color:#000000;
+    padding-left:20px;
+    padding-right:20px;
+    margin-bottom:20px;
+}
