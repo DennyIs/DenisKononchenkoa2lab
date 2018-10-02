@@ -1,7 +1,14 @@
 body {
     background: url(images/background.jpg) repeat-y;
-               
+}
+.text {
+    background: #fff; /* Цвет фона */
+    border-radius: 10px; /* Радиус скругления */
    }
+img{
+    width: 128px;
+    height: 128px;
+}
 button {
     background: #00CC99;
     height: 55px; 
