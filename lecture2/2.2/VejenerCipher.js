@@ -10,7 +10,7 @@ function VijenerEncryptor(){
         result += alphabet[temp]
         index += 1
         if (index + 1 > key.length) {
-            index = 0
+            index = 1
         }
     });
     console.log(result)
@@ -30,7 +30,7 @@ function VijenerDecryptor() {
         result += alphabet[temp]
         index += 1
         if (index + 1 > key.length) {
-            index = 0
+            index = 1
         }
     });
     document.getElementById("output").value = result
