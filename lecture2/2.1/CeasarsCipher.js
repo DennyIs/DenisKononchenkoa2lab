@@ -24,16 +24,19 @@ function CeasarDecryptor(){
 	output = document.getElementById("output").value
     shift = document.getElementById("shift").value
 	var decryp_result = ""
-	shift =- shift
     var i = 0
+    while (shift > 26) {
+        shift = shift - 26
+    }
     while (i < output.length)
     {   
     	letter = output[i]
     	letter = letter.charCodeAt(letter)
-    	if (letter >=97 && letter <=122) {
-            decryp_result += String.fromCharCode((letter - 97 + shift + 26) % 26 + 97)
+    	if (letter >=97 && letter < 123) {
+            decryp_result += String.fromCharCode((letter - 97 - shift + 26) % 26 + 97)
+           
         } else if (letter >= 65 && letter <= 90) {
-            decryp_result += String.fromCharCode((letter - 65 + shift + 26) % 26 + 65)
+            decryp_result += String.fromCharCode((letter - 65 - shift + 26) % 26 + 65)
         } else {
             decryp_result += String.fromCharCode(letter)
         }
