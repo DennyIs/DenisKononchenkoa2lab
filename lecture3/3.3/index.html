@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Download file server</title>
+
+</head>
+
+<body>
+  <h3> Download file server</h3>
+  <!-- <button onClick="uploadFile" class="btn btn-raised">Upload</button> -->
+  <ol id="download"></ol>
+  <div id="toast"></div>
+  <script>
+    var downloadDOM = document.getElementById('download');
+      var toastDOM = document.getElementById('toast');
+      showFiles();
+      function showFiles(){
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', '/list', true);
+        xhr.onreadystatechange = function(){
+          if(xhr.readyState === 4){
+            if(xhr.status === 200){
+              let listOfFile = JSON.parse(xhr.responseText);
+              let listOfFileHTML = ""
+              for(var i=0; i<listOfFile.length; i++){
+                listOfFileHTML = listOfFileHTML + "<li> <a href='/download-folder/" + listOfFile[i] +"'>" + listOfFile[i] + "</a></li>"
+              }
+              downloadDOM.innerHTML = listOfFileHTML;
+            }else{
+            }
+          }
+        }
+        xhr.send();
+      }
+  </script>
+</body>
+</html>
