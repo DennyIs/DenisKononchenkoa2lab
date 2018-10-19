@@ -16,7 +16,7 @@ if(a.length > 1) {
 		if (b && b[0].toUpperCase()!==b[0]) {
 			errros_small_latter += b[0] + " "
 			console.log("после точки маленькая буква: " + b[0])
-			style.border = "5px solid #DF0101";		}
+			style.border = "5px solid #DF0101";	}
 	}
 }
 for (var i = 0; i < string.length; i++){
@@ -30,6 +30,12 @@ for (var i = 0; i < string.length; i++){
 		style.border = "5px solid #DF0101";
 	}
 }
+if (string.length > 999){
+		alert("Введено больше 999 символов")
+	}
+if (errors_simbols.length == 0 && errors_latter.length == 0 && errros_small_latter == 0){
+		style.border = "1px solid #000000";
+	}
 document.getElementById("output").value = "Количество слов: " + word_counter.length  + "\n"  
 + "Количество букв: " + letter_counter.length + "\n" + "Есть недопустимые символы в слове: " + errors_latter
 + "\n" + "Знак препинания без пробела: "+ errors_simbols + "\n" + "После точки есть маленькая буква: " + errros_small_latter
