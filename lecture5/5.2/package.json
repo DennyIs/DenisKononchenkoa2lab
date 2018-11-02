@@ -1,0 +1,21 @@
+{
+  "name": "lection5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "innerhtml": "^1.0.2",
+    "install": "^0.12.2",
+    "mysql": "^2.16.0",
+    "npm": "^6.4.1",
+    "url": "^0.11.0"
+  }
+}

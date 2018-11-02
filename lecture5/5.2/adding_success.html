@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Новостной портал</title>
+    <script src="AddPost.js"></script>
+    <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
+    <ul>
+        <li><a href="/">Новости</a></li>
+        <li><a href="./admin_panel">Администратор</a></li>
+    </ul>
+  </head>
+  <body>
+    <div align="center">
+    <h1>Вы отправили новость</h1>
+    <p>
+        <b>Тема:</b> <%= data.title %><br>
+        <b>Новость:</b> <%= data.desc %><br>
+    </p>
+    <p>Хотите написать еще одну новость?</p>
+    <form action="/admin_panel">
+    <button type="submit">Вернутся</button>
+    </form>
+    <form action="/">
+      <button type="submit">Просмотреть все новости</button>
+    </form>
+  </div>
+  </body>
+  
+  
+</html>
